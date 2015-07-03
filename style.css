@@ -1,0 +1,64 @@
+body
+{
+    bottom: 0;
+    height: 500px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+	
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    background: -moz-radial-gradient(center, ellipse cover, #018169 0%, #004D58 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #018169), color-stop(100%, #004D58));
+    background: -webkit-radial-gradient(center, circle cover, #018169, #004D58);
+    background: -o-radial-gradient(center, circle cover, #018169, #004D58);
+    background: -ms-radial-gradient(center, circle cover, #018169, #004D58);
+    background: radial-gradient(circle at center, #018169, #004D58);
+    background-attachment: fixed;	
+}
+
+header .name 
+{
+    color: #fff;
+    font-weight: 100;
+    font-size: 52px;
+    text-align: center;
+	letter-spacing: 1px;
+}
+
+header .slogan
+{
+    color: #fff;
+    font-weight: 100;
+    font-size: 42px;
+    text-align: center;
+	letter-spacing: 1px;
+}
+
+header .stuff
+{
+	padding-top: 55px;
+    font-weight: 100;
+    font-size: 32px;
+    text-align: center;
+	letter-spacing: 1px;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+header .contact
+{
+	padding-top: 100px;
+    color: #fff;
+    font-weight: 100;
+    font-size: 32px;
+    text-align: center;
+	letter-spacing: 1px;
+}

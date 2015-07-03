@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSON Query</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="ideal-image-slider.css">
+<link rel="stylesheet" href="default.css">
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10969879-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script src="ideal-image-slider.min.js"></script>
+<script src="iis-bullet-nav.js"></script>
+
+</head>
+
+<body>
+
+	<header>
+
+		<div class="logo"></div>
+		
+		<div class="name">JSON Query</div>
+		
+		<div class="slogan">Query JSON data structures without serialization</div>
+
+		<br>
+
+	    <div id="slider">
+	        <img src="img/screenshot1.png" alt="">
+            <img data-src="img/screenshot2.png" data-src-2x="img/screenshot2@2x.png" src="" alt="">
+            <img data-src="img/screenshot3.png" data-src-2x="img/screenshot3@2x.png" src="" alt="">
+            <img data-src="img/screenshot4.png" data-src-2x="img/screenshot4@2x.png" src="" alt="">
+            <img data-src="img/screenshot5.png" data-src-2x="img/screenshot5@2x.png" src="" alt="">
+	    </div>
+
+		<br>
+
+		<div class="availability">Requires OS X Mavericks</div>
+		
+		<div class="appstore">
+			<a href="https://itunes.apple.com/us/app/json-query/id953006734?mt=12"><img src="img/download_badge.svg"></a> 
+		</div>
+		
+		<div class="copyright">
+			<a href="http://www.satishmaha.com/">Copyright © 2015 Satish Mahalingam</a> 
+		</div>
+
+		
+	</header>
+</body>
+
+<script>
+var slider = new IdealImageSlider.Slider('#slider');
+slider.addBulletNav();
+slider.start();
+</script>
+</html>

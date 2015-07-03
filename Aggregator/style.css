@@ -1,0 +1,91 @@
+body
+{
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #FFE5C2;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-width: 768px;
+    line-height: 1.5;
+    background: #312745;
+    background: #695C56;
+    background: -moz-radial-gradient(center, ellipse cover, #695C56 0%, #312745 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #695C56), color-stop(100%, #312745));
+    background: -webkit-radial-gradient(center, circle cover, #695C56, #312745);
+    background: -o-radial-gradient(center, circle cover, #695C56, #312745);
+    background: -ms-radial-gradient(center, circle cover, #695C56, #312745);
+    background: radial-gradient(circle at center, #695C56, #312745);
+    background-attachment: fixed;
+}
+
+header .name 
+{
+    font-weight: 100;
+    font-size: 72px;
+    text-align: center;
+	letter-spacing: 3px;
+}
+
+header .slogan
+{
+	top-padding: 25px;
+    font-weight: 100;
+    font-size: 32px;
+    text-align: center;
+	letter-spacing: 1px;
+    position: relative;
+}
+
+header .center {
+    max-width: 960px;
+    position: relative;
+    margin: 0 auto;
+}
+
+header .logo
+{
+	margin: 50px 20px 20px 20px;
+	top-padding: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 51.2px;
+}
+
+.iphone
+ {
+    width: 391px;
+    height: 750px;
+    background: -webkit-image-set( url(img/iPhonePic.png)    1x,
+                                   url(img/iPhonePic_2x.png) 2x);
+    background-size: 100% auto;
+    position: relative;
+    margin: 50px auto;
+}
+
+.availability
+{
+	top-padding: 25px;
+    font-weight: 100;
+    font-size: 32px;
+    text-align: center;
+	letter-spacing: 1px;
+    position: relative;
+}
+
+header .appstore
+{
+	margin: 50px 20px 20px 20px;
+	text-align: center;
+}
+
+header .copyright
+{
+	top-padding: 25px;
+    font-weight: 100;
+    font-size: 22px;
+    text-align: center;
+	letter-spacing: 1px;
+    position: relative;
+}

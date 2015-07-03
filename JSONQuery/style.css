@@ -1,0 +1,87 @@
+body
+{
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-width: 768px;
+    line-height: 1.5;
+    background: #360033;
+    background: #0b8793;
+    background: -moz-radial-gradient(center, ellipse cover, #0b8793 0%, #360033 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #0b8793), color-stop(100%, #360033));
+    background: -webkit-radial-gradient(center, circle cover, #0b8793, #360033);
+    background: -o-radial-gradient(center, circle cover, #0b8793, #360033);
+    background: -ms-radial-gradient(center, circle cover, #0b8793, #360033);
+    background: radial-gradient(circle at center, #0b8793, #360033);
+    background-attachment: fixed;
+}
+
+header .name 
+{
+    font-weight: 100;
+    font-size: 72px;
+    text-align: center;
+	letter-spacing: 3px;
+}
+
+header .slogan
+{
+	top-padding: 25px;
+    font-weight: 100;
+    font-size: 32px;
+    text-align: center;
+	letter-spacing: 1px;
+    position: relative;
+}
+
+header .center {
+    max-width: 960px;
+    position: relative;
+    margin: 0 auto;
+}
+
+header .logo
+{
+    width: 256px;
+    height: 256px;
+    background: -webkit-image-set( url(img/icon.png)    1x,
+                                   url(img/icon_2x.png) 2x);
+    background-size: 100% auto;
+    position: relative;
+    margin: 2px auto;
+}
+
+.availability
+{
+	top-padding: 25px;
+    font-weight: 100;
+    font-size: 32px;
+    text-align: center;
+	letter-spacing: 1px;
+    position: relative;
+}
+
+header .appstore
+{
+	margin: 30px 20px 20px 20px;
+	text-align: center;
+}
+
+header .copyright
+{
+	top-padding: 25px;
+    font-weight: 100;
+    font-size: 22px;
+    text-align: center;
+	letter-spacing: 1px;
+    position: relative;
+}
+
+header .copyright .a:hover, a:visited, a:link, a:active
+{
+    color: #fff;
+    text-decoration: none;
+}
