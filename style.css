@@ -11,12 +11,7 @@ body
 	
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
-    background: -moz-radial-gradient(center, ellipse cover, #018169 0%, #004D58 100%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #018169), color-stop(100%, #004D58));
-    background: -webkit-radial-gradient(center, circle cover, #018169, #004D58);
-    background: -o-radial-gradient(center, circle cover, #018169, #004D58);
-    background: -ms-radial-gradient(center, circle cover, #018169, #004D58);
-    background: radial-gradient(circle at center, #018169, #004D58);
+    background: radial-gradient(circle at center, #16222A, #3A6073);
     background-attachment: fixed;	
 }
 
