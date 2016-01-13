@@ -1,10 +1,9 @@
 .guide
 {
     border-radius: 6px;
-    /*background: rgba(0, 0, 0, 0.6);*/
     padding: 5px; 
     width: 80%;
-    height: 610px; 
+    height: 620px; 
     text-align: center;
     margin: auto;
     font-weight: 100;
@@ -15,7 +14,7 @@
 {
     background-color: #000000;
     border-radius: 6px;
-    opacity: .5;
+    background: rgba(0, 0, 0, 0.6);
     float:left;
     width: 30%;
     height: 80%;
@@ -25,12 +24,6 @@
     padding-left: 4px;
 }
 
-/*.guide .secondary
-{
-    text-align: center;
-    font-size: 20px;
-}
-*/
 .guide .queries
 {
     background: rgba(0, 0, 0, 0.5);
@@ -48,8 +41,8 @@
     float: left;
     position: relative;
     width: auto;
-    background: #000000;
-    opacity: .6;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
     border-radius: 6px;
     margin: 0px 10px 0px 10px;
     padding: 0px 4px 0px 4px;
