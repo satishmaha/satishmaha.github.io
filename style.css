@@ -29,7 +29,7 @@
 
 body,
 html {
-  font-family: -apple-system, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
   font-size: 14px;
   background: radial-gradient(circle at center, #734b6d, #42275a);
   background-attachment: fixed;
