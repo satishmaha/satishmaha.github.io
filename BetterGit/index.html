@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BetterGit — A simple Git UI</title>
+<meta name="description" content="A free, cross-platform Git UI. No accounts, no sign ups, no fuss. What you see is what you get.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 24px 0;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #f0f6fc;
+    margin-bottom: 16px;
+  }
+
+  .logo span {
+    color: #58a6ff;
+  }
+
+  .tagline {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    color: #8b949e;
+    max-width: 520px;
+    margin: 0 auto 40px;
+    line-height: 1.5;
+  }
+
+  .downloads {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 64px;
+  }
+
+  .dl-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .dl-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  }
+
+  .dl-btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .dl-btn.mac {
+    background: #1c2128;
+    color: #f0f6fc;
+  }
+
+  .dl-btn.linux {
+    background: #1c2128;
+    color: #f0f6fc;
+  }
+
+  .dl-btn.windows {
+    background: #1c2128;
+    color: #f0f6fc;
+  }
+
+  .screenshot-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  .screenshot-wrap img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #21262d;
+    box-shadow: 0 16px 64px rgba(0,0,0,0.5);
+  }
+
+  .features {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 100px;
+  }
+
+  .features h2 {
+    text-align: center;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 700;
+    color: #f0f6fc;
+    margin-bottom: 48px;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+
+  .feature-card {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 12px;
+    padding: 28px 24px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+    color: #f0f6fc;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .feature-card p {
+    font-size: 0.92rem;
+    color: #8b949e;
+    line-height: 1.6;
+  }
+
+  .feature-icon {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    background: rgba(88,166,255,0.1);
+    color: #58a6ff;
+  }
+
+  .platforms {
+    text-align: center;
+    padding: 0 24px 80px;
+    color: #484f58;
+    font-size: 0.9rem;
+  }
+
+  .free-badge {
+    display: inline-block;
+    background: rgba(63,185,80,0.12);
+    color: #3fb950;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 48px;
+    letter-spacing: 0.03em;
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 48px 16px 0; }
+    .downloads { flex-direction: column; align-items: center; }
+    .dl-btn { width: 100%; max-width: 280px; justify-content: center; }
+    .screenshot-wrap { padding: 0 16px 60px; }
+    .features { padding: 0 16px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1 class="logo">Better<span>Git</span></h1>
+  <p class="tagline">A simple Git UI. No accounts, no sign ups, no notifications. What you see is all there is.</p>
+  <span class="free-badge">Free &amp; Open Platform</span>
+  <div class="downloads">
+    <a href="https://bettergit.satishmaha.com/download/BetterGit-mac-arm64.dmg" class="dl-btn mac">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      macOS (Apple Silicon)
+    </a>
+    <a href="https://bettergit.satishmaha.com/download/BetterGit-mac-x64.dmg" class="dl-btn mac">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      macOS (Intel)
+    </a>
+    <a href="https://bettergit.satishmaha.com/download/BetterGit-linux-x64.AppImage" class="dl-btn linux">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.368 1.884 1.43.868.07 1.723-.26 2.456-.594.733-.34 1.455-.807 2.087-1.415.59-.57 1.107-1.334 1.341-2.156.213-.748.168-1.536-.063-2.174.22-.19.468-.358.69-.593.39-.26.775-.67 1.025-1.004.217-.3.39-.658.477-1.02.074-.307.09-.645.046-.932-.048-.29-.145-.578-.27-.826-.336-.667-.95-1.148-1.542-1.428-.298-.14-.618-.236-.891-.336l-.017-.006c-.189-.066-.393-.127-.567-.198-.066-.036-.13-.065-.19-.109-.235-.152-.47-.355-.529-.588-.039-.16-.016-.339.037-.517.092-.297.303-.73.462-.945.05-.066.096-.136.098-.203.003-.12-.05-.249-.16-.387-.29-.364-.94-.618-1.34-.6-.12 0-.26.024-.394.057a3.36 3.36 0 00-.378.122c-.118.048-.257.1-.371.161l-.009.002c-.225.093-.493.174-.737.243-.596.165-1.082.164-1.466-.01-.39-.177-.616-.52-.854-.968-.248-.465-.506-1.036-.989-1.595-.483-.557-1.198-1.098-2.322-1.444A5.293 5.293 0 0012.504 0z"/></svg>
+      Linux (x64)
+    </a>
+    <a href="https://bettergit.satishmaha.com/download/BetterGit-windows-x64.exe" class="dl-btn windows">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+      Windows (x64)
+    </a>
+  </div>
+</section>
+
+<section class="screenshot-wrap">
+  <img src="screenshot.png" alt="BetterGit interface showing branches, commit history, and diff view" loading="lazy">
+</section>
+
+<section class="features">
+  <h2>Git, without the baggage</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <span class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+      </span>
+      <h3>Everything visible</h3>
+      <p>No features hidden in menus or settings panels. What you see on screen is all there is.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </span>
+      <h3>No accounts</h3>
+      <p>No sign ups, no logins, no telemetry. Download it, open it, use it.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+      </span>
+      <h3>No notifications</h3>
+      <p>No badges, no pop-ups, no update nags. It stays out of your way.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+      </span>
+      <h3>Minimal by design</h3>
+      <p>No confusing features or settings to get lost in. Just the Git workflow you need.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </span>
+      <h3>Cross-platform</h3>
+      <p>Runs on macOS, Windows, and Linux. Same simple experience everywhere.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+      </span>
+      <h3>Free</h3>
+      <p>No trials, no tiers, no paywalls. Download it and it's yours.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="platforms">
+  <p>Available for macOS (Apple Silicon &amp; Intel), Linux, and Windows</p>
+</footer>
+
+</body>
+</html>
